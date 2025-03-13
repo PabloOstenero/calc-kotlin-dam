@@ -3,6 +3,7 @@ fun main(args: Array) {
     val result = when (operation) {
         "multiplica" -> multiplica(num1, num2)
         "divide" -> divide(num1, num2)
+        "suma" -> suma(num1, num2)
         else -> throw IllegalArgumentException("Operación no soportada")
     }
     showResult(operation, result)
@@ -24,6 +25,10 @@ fun multiplica(num1: Int, num2: Int): Int {
 
 fun showResult(operation: String, result: Int) {
     println("El resultado de la operación \"$operation\" es: $result")
+}
+
+fun suma(num1: Int, num2: Int): Int {
+    return num1 + num2
 }
 
 fun divide(num1: Int, num2: Int): Int {
